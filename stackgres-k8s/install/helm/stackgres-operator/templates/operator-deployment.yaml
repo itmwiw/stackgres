@@ -35,8 +35,10 @@ spec:
         imagePullPolicy: {{ .Values.operator.image.pullPolicy }}
         securityContext:
           runAsNonRoot: true
+          {{- if not (.Capabilities.APIVersions.Has "project.openshift.io/v1") }}
           runAsUser: 185
           runAsGroup: 185
+          {{- end }}
         env:
           - name: OPERATOR_NAME
             value: "{{ .Release.Name }}"
