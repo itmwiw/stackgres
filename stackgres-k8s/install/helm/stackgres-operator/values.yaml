@@ -74,12 +74,12 @@ prometheus:
 
 grafana:
   #Embed an existing grafana by setting grafana.autoEmbed to true
-  autoEmbed: false
+  autoEmbed: true
   user: admin
   password: prom-operator
   # Set the HTTP scheme used by grafana:
   schema: http
-  # webHost: "kube-prometheus-stack-grafana.default.svc"
+  webHost: "prometheus-grafana.monitoring"
   #Use follwing fields to indicate a secret where the grafana admin credentials are stored (replace user/password)
   #secretNamespace:
   #secretName:
