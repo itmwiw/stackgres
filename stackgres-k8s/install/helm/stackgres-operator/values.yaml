@@ -74,7 +74,7 @@ prometheus:
 
 grafana:
   #Embed an existing grafana by setting grafana.autoEmbed to true
-  autoEmbed: true
+  autoEmbed: false
   user: admin
   password: prom-operator
   # Set the HTTP scheme used by grafana:
